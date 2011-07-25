@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<name>ASI</name>
+	<path>asi.ac</path>
+
+	<animation>
+	<type>rotate</type>
+	<object-name>needle</object-name>
+	<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+	<interpolation>
+		<entry><ind>  0</ind><dep>0</dep></entry>
+		<entry><ind>  50</ind><dep>30.4</dep></entry>
+		<entry><ind>  60</ind><dep>40</dep></entry>
+		<entry><ind>  70</ind><dep>48.7</dep></entry>
+		<entry><ind>  80</ind><dep>60.4</dep></entry>
+		<entry><ind>  90</ind><dep>74.9</dep></entry>
+		<entry><ind>  100</ind><dep>90</dep></entry>
+		<entry><ind> 110</ind><dep>103.2</dep></entry>
+		<entry><ind> 120</ind><dep>108.8</dep></entry>
+		<entry><ind> 130</ind><dep>119.9</dep></entry>
+		<entry><ind> 140</ind><dep>127.4</dep></entry>
+		<entry><ind> 150</ind><dep>135.6</dep></entry>
+		<entry><ind> 200</ind><dep>180</dep></entry>
+		<entry><ind> 250</ind><dep>215.6</dep></entry>
+		<entry><ind> 300</ind><dep>256.6</dep></entry>
+		<entry><ind> 350</ind><dep>297</dep></entry>
+		<entry><ind> 400</ind><dep>340.8</dep></entry>
+	</interpolation>
+	<axis><x>-1</x></axis>
+	</animation>
+
+	<animation> 
+		<object-name>mount</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.385</red>
+			<green>0.168</green>
+			<blue>0.07</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<object-name>face</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<object-name>needle</object-name>
+		<type>material</type>
+		<emission> 
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>0.55</red>
+			<green>0.24</green>
+			<blue>0.10</blue>
+		</emission>
+	</animation>
+
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5</max-m>
+	</animation>
+
+</PropertyList>

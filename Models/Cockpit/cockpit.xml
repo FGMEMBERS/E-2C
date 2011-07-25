@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<!--<path>group-cockpit.ac</path>-->
+
+	<!--<animation>
+		<type>select</type>
+		<object-name>group-cockpit</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>sim/current-view/name</property>
+					<value>RIO View</value>
+				</equals>
+				<equals>
+					<property>sim/current-view/name</property>
+					<value>Back-seat View</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>-->
+
+
+	<!-- coarse cockpit 
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/coarse-inside.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>-->
+
+	<!-- detailed cockpit 
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/detail-inside-front.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/detail-inside-back.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>-->
+
+<!-- ******************************************************************* -->
+<!-- Pilot's Instruments                                                 -->
+<!-- ******************************************************************* -->
+
+
+	<!-- Stick 
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/stick.xml</path>
+		<offsets>
+			<x-m>-5.6170</x-m>
+			<y-m>0.0000</y-m>
+			<z-m>-0.5898</z-m>
+		</offsets>
+		<pitch-deg>-5</pitch-deg>
+	</model>-->
+
+	<!-- Windshield Indicators 
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/aoa-indexer.xml</path>
+		<offsets>
+			<x-m>-5.9288</x-m>
+			<y-m>-0.1551</y-m>
+			<z-m>0.2363</z-m>
+			<heading-deg>12</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/windshield-warn-lights-right.xml</path>
+		<offsets>
+			<x-m>-5.9288</x-m>
+			<y-m>0.1321</y-m>
+			<z-m>0.2363</z-m>
+			<heading-deg>-12</heading-deg>
+		</offsets>
+	</model>-->
+
+
+
+	<!-- Main Panel -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/chronograph.xml</path>
+		<offsets>
+			<x-m>-7.6763</x-m>
+			<y-m>-0.6346</y-m>
+			<z-m>-0.6061</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/radar-altimeter.xml</path>
+		<offsets>
+			<x-m>-7.6567</x-m>
+			<y-m>-0.6437</y-m>
+			<z-m>-0.6787</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/bdhi.xml</path>
+		<offsets>
+			<x-m>-7.6899</x-m>
+			<y-m>-0.3347</y-m>
+			<z-m>-0.5379</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/adi.xml</path>
+		<offsets>
+			<x-m>-7.6858</x-m>
+			<y-m>-0.4483</y-m>
+			<z-m>-0.5702</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/vsi.xml</path>
+		<offsets>
+			<x-m>-7.6559</x-m>
+			<y-m>-0.4845</y-m>
+			<z-m>-0.6683</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/asi.xml</path>
+		<offsets>
+			<x-m>-7.6789</x-m>
+			<y-m>-0.5596</y-m>
+			<z-m>-0.5959</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Instruments-3d/altimeter/altimeter.xml</path>
+		<offsets>
+			<x-m>-7.6568</x-m>
+			<y-m>-0.5596</y-m>
+			<z-m>-0.6791</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+
+<!-- ******************************************************************* -->
+<!-- Specials                                                            -->
+<!-- ******************************************************************* -->
+
+
+	<!-- Lighting 
+	<animation> 
+		<object-name>pilots-canopy-jett</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.1375</red>
+			<green>0.06</green>
+			<blue>0.025</blue>
+		</emission>
+	</animation>
+	<animation>
+		<object-name>panel-front-cover-protection</object-name>
+		<object-name>bathtub-top-front</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.0687</red>
+			<green>0.03</green>
+			<blue>0.0125</blue>
+		</emission>
+	</animation>-->
+
+</PropertyList>
