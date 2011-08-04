@@ -10,7 +10,7 @@ History:
 
 Model:
 ------
-The model was started from Emmanuel Baranger's E-2C variant of the C-3A and this was a valuable gain of time. A few parts remain from the original model.
+The model was started from Emmanuel Baranger's E-2C variant of the C-2A and this was a valuable gain of time. A few parts remain from the original model.
 
 Copyright:
 ----------
