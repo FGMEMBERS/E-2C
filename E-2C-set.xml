@@ -10,16 +10,21 @@ Grumman E-2C simulation config.
 <PropertyList>
 	<sim>
 
-		<startup>
-			<splash-texture>Aircraft/E-2C/E-2C-splash1.png</splash-texture>
-		</startup>
 
-		<flight-model>yasim</flight-model>
 		<status>alpha</status>
 		<author>Alexis Bory</author>
-		<aero>E-2C-yasim</aero>
-		<fuel-fraction>0.66</fuel-fraction>
 		<description>Grumman E-2C (YASim FDM)</description>
+		<rating>
+			<FDM type="int">2</FDM>
+			<systems type="int">0</systems>
+			<cockpit type="int">2</cockpit>
+			<model type="int">3</model>
+		</rating>
+
+		<flight-model>yasim</flight-model>
+		<aero>E-2C-yasim</aero>
+
+		<fuel-fraction>0.66</fuel-fraction>
 		<virtual-cockpit archive="y">false</virtual-cockpit>
 		<chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
 
@@ -34,6 +39,13 @@ Grumman E-2C simulation config.
 				</colors>
 			</style>
 		</gui>
+		<startup>
+			<splash-texture>Aircraft/E-2C/E-2C-splash1.png</splash-texture>
+		</startup>
+
+	<instrumentation>
+		<path>Aircraft/E-2C/Systems/instrumentation.xml</path>
+	</instrumentation>
 
 		<rendering>
 			<redout>

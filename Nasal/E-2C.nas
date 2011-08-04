@@ -9,6 +9,7 @@ var MagDev           = props.globals.getNode("orientation/local-mag-dev", 1);
 var Tc               = props.globals.getNode("instrumentation/tacan");
 var TcTrueHdg        = Tc.getNode("indicated-bearing-true-deg");
 var TcMagHdg         = Tc.getNode("indicated-mag-bearing-deg", 1);
+var Vac_inhg         = "systems/vacuum[2]/suction-inhg";
 
 var mag_dev = 0;
 
@@ -34,6 +35,12 @@ var tacan_update = func {
 	}
 }
 
+var vacuum_update = func {
+	# used to fake the Attitude Indicator powering
+	# FIXME: when electrical system up and running
+	setprop(Vac_inhg, 5);
+}
+
 # Main loop ###############
 var cnt = 0;
 
@@ -57,6 +64,7 @@ var main_loop = func {
 		}
 	} else {
 		# done each 0.1 sec, cnt odd.
+		vacuum_update();
 		if (( cnt == 5 ) or ( cnt == 11 )) {
 			# done each 0.3 sec.
 			if ( cnt == 11 ) {

@@ -162,7 +162,7 @@
              min-rpm="663"
              max-rpm="1020">
              <actionpt x="4.132" y="3.169" z="0.029"/>
-             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
+             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="PROP"/>
              <turbine-engine eng-power="5100"
                              eng-rpm="1020"
                              alt="37000"
@@ -173,6 +173,7 @@
                              <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
                              <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
+
              </turbine-engine>
   </propeller>
 
@@ -188,7 +189,7 @@
              min-rpm="663" 
              max-rpm="1020"> 
              <actionpt x="4.132" y="-3.169" z="0.029"/>
-             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
+             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="PROP"/>
              <turbine-engine eng-power="5100"
                              eng-rpm="1020"
                              alt="37000"
@@ -199,6 +200,7 @@
                              <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
                              <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
+
              </turbine-engine>
     </propeller>
 

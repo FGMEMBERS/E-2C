@@ -71,8 +71,8 @@
 
 <!-- ################### External Animations ################### -->
 <!-- ########################################################### -->
-	
-    <!-- ########## canopy ########### 
+
+	<!-- ########## canopy ########### 
 	<animation>
 		<type>translate</type>
 		<object-name>CPT-canopy-back</object-name>
@@ -552,7 +552,7 @@
 			<z>0.0</z>
 		</axis>
 	</animation>
-	
+
 <!-- Extend/Retract -->
 	<animation>
 		<type>rotate</type>
@@ -1139,7 +1139,7 @@
 		<factor>0.547</factor>
 		<axis><z>1</z></axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-LTorqueUpper</object-name>
@@ -1830,7 +1830,7 @@
 		</interpolation>
 	</animation>-->
 
-	
+
 	<!-- position-wing-left 
 	<animation>
 		<type>select</type>
@@ -1942,7 +1942,7 @@
 		</interpolation>
 	</animation>-->
 
-	
+
 	<!-- position-wing-right 
 	<animation>
 		<type>select</type>
