@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- E-2C instrumentation configuration. -->
+
+
+
+
+	<attitude-indicator>
+		<name>attitude-indicator</name>
+		<number>0</number>
+		<suction>systems/vacuum[2]/suction-inhg</suction>
+	</attitude-indicator>
+
+	<airspeed-indicator>
+		<name>airspeed-indicator</name>
+		<number>0</number>
+		<total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+	</airspeed-indicator>
+
+	<altimeter>
+		<name>altimeter</name>
+		<number>0</number>
+		<static-pressure>/systems/static/pressure-inhg</static-pressure>
+	</altimeter>
+
+	<clock>
+		<name>clock</name>
+		<number>0</number>
+	</clock>
+
+	<slip-skid-ball>
+		<name>slip-skid-ball</name>
+		<number>0</number>
+	</slip-skid-ball>
+
+	<tacan>
+		<name>tacan</name>
+		<number>0</number>
+	</tacan>
+
+	<turn-indicator>
+		<name>turn-indicator</name>
+		<number>0</number>
+	</turn-indicator>
+
+</PropertyList>
