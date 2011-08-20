@@ -97,9 +97,9 @@
 		<type>select</type>
 		<object-name>needle-2-off</object-name>
 		<condition>
-			<not>
-				<property>instrumentation/tacan/in-range</property>
-			</not>
+				<not>
+					<property>instrumentation/tacan/in-range</property>
+				</not>
 		</condition>
 	</animation>
 	<animation>
@@ -114,9 +114,9 @@
 		<type>select</type>
 		<object-name>no-range-flag</object-name>
 		<condition>
-			<not>
-				<property>instrumentation/tacan/in-range</property>
-			</not>
+				<not>
+					<property>instrumentation/tacan/in-range</property>
+				</not>
 		</condition>
 	</animation>
 
