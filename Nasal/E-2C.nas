@@ -86,4 +86,10 @@ var init = func {
 
 setlistener("sim/signals/fdm-initialized", init);
 
+# Miscelaneous definitions and tools ############
+
+# warning lights medium speed flasher
+# -----------------------------------
+aircraft.light.new("sim/model/E-2C/lighting/warn-medium-lights-switch", [0.3, 0.2]);
+setprop("sim/model/E-2C/lighting/warn-medium-lights-switch/enabled", 1);
 

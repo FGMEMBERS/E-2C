@@ -67,25 +67,6 @@
 		<pitch-deg>-5</pitch-deg>
 	</model>-->
 
-	<!-- Windshield Indicators 
-	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/aoa-indexer.xml</path>
-		<offsets>
-			<x-m>-5.9288</x-m>
-			<y-m>-0.1551</y-m>
-			<z-m>0.2363</z-m>
-			<heading-deg>12</heading-deg>
-		</offsets>
-	</model>
-	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/windshield-warn-lights-right.xml</path>
-		<offsets>
-			<x-m>-5.9288</x-m>
-			<y-m>0.1321</y-m>
-			<z-m>0.2363</z-m>
-			<heading-deg>-12</heading-deg>
-		</offsets>
-	</model>-->
 
 
 
@@ -158,6 +139,16 @@
 			<y-m>-0.5596</y-m>
 			<z-m>-0.6791</z-m>
 			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<!-- Windshield Indicators -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/aoa-indexer.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
 		</offsets>
 	</model>
 
