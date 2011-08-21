@@ -161,8 +161,24 @@ Grumman E-2C simulation config.
 					<rotodome>
 						<rotation-rpm>5</rotation-rpm>
 					</rotodome>
+					<lighting>
+						<!--<anti-collision-switch type="bool">true</anti-collision-switch>-->
+						<!--<hook-bypass type="bool">false</hook-bypass>--><!-- false = carrier -->
+						<index-norm type="double">1</index-norm>
+						<!--<position-tail-switch type="int">1</position-tail-switch>-->
+						<!--<position-wing-switch type="int">1</position-wing-switch>-->
+						<!--<position-flash-switch type="bool">true</position-flash-switch>-->
+					</lighting>
 				</controls>
 				<instrumentation>
+					<aoa-indexer>
+						<!-- target = 11.8 deg AoA -->
+						<too-slow-deg>13.4</too-slow-deg> <!-- target +1.6 deg -->
+						<slow-deg>12.6</slow-deg>         <!-- target +0.8 deg -->
+						<target-deg>11.8</target-deg>     <!-- target -->
+						<fast-deg>11.0</fast-deg>         <!-- target -0.8 deg -->
+						<too-fast-deg>10.4</too-fast-deg>  <!-- target -1.6 deg -->
+					</aoa-indexer>
 					<radar-altimeter>
 						<limit-bug type="double">250</limit-bug>
 					</radar-altimeter>
