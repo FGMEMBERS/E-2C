@@ -93,3 +93,21 @@ setlistener("sim/signals/fdm-initialized", init);
 aircraft.light.new("sim/model/E-2C/lighting/warn-medium-lights-switch", [0.3, 0.2]);
 setprop("sim/model/E-2C/lighting/warn-medium-lights-switch/enabled", 1);
 
+# wing fold
+# ---------
+var WingFold    = aircraft.door.new("surface-positions/wing-fold", 12);
+
+var mp_wing_pos = props.globals.getNode("surface-positions/wing-fold-pos-norm", 1);
+mp_wing_pos.alias(props.globals.getNode("surface-positions/wing-fold/position-norm"));
+
+# Override standard controls.wingsDown() so the regular keybindings trigger the
+# whole sequence.
+controls.wingsDown = func(n) {
+	if ( n == -1 ) {
+		WingFold.open();
+	} elsif ( n == 1 ) {
+		WingFold.close();
+	} 
+}
+
+
