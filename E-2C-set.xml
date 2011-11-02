@@ -145,17 +145,17 @@ Grumman E-2C simulation config.
 
 <!--		<sound>
 			<audible>true</audible>
-			<path>Aircraft/A-6E/Sounds/A-6E-sound.xml</path>
+			<path>Aircraft/E-2C/Sounds/E-2C-sound.xml</path>
 		</sound>
 
 		<systems>
 			<autopilot>
-				<path>Aircraft/A-6E/Systems/A-6E-autopilot.xml</path>
+				<path>Aircraft/E-2C/Systems/E-2C-autopilot.xml</path>
 			</autopilot>
 		</systems> -->
 
 		<model>
-			<path>Aircraft/E-2C/Models/E-2C-model.xml</path>
+			<path>Aircraft/E-2C/Models/E-2C-Hawkeye.xml</path>
 			<E-2C>
 				<controls>
 					<rotodome>
@@ -189,7 +189,7 @@ Grumman E-2C simulation config.
 
 
 		<help>
-<!--			<title>Grumman A-6E</title>
+<!--			<title>Grumman E-2C</title>
 			<line>Cruise Speed:      412 kt @ 25000 ft (90% throttle)</line>
 			<line>Max speed:         565 kt at see level</line>
 			<line>Min Speed:         120 kt (full flaps)</line>
