@@ -266,8 +266,8 @@
 
 
     <!-- 2 x 912 gallons (2 x 6200 lb)-->
-    <tank x="1.450" y="2.110" z="0.187" capacity="6200"/>
-    <tank x="1.450" y="-2.110" z="0.187" capacity="6200"/>
+    <tank x="1.450" y="1.90" z="0.187" capacity="6200"/>
+    <tank x="1.450" y="-1.90" z="0.187" capacity="6200"/>
 
     <!-- Hook -->
     <hook x="-5.9824" y="0.0" z="-1.1493" length="2.03" down-angle="60" up-angle="10">
