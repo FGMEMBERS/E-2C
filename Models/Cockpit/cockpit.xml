@@ -142,6 +142,17 @@
 		</offsets>
 	</model>
 
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/fuel-gauge.xml</path>
+		<offsets>
+			<x-m>-7.6587</x-m>
+			<y-m>-0.2607</y-m>
+			<z-m>-0.6719</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+
 	<!-- Windshield Indicators -->
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/aoa-indexer.xml</path>
