@@ -61,6 +61,7 @@
 		<shader>chrome</shader>
 		<texture>Aircraft/E-2C/Models/glass_shader.png</texture>
 		<object-name>glass-clear</object-name>
+		<object-name>lights-transparent-shield</object-name>
 	</animation>
 	<animation>
 		<type>shader</type>
