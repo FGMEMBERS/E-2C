@@ -41,6 +41,34 @@ var vacuum_update = func {
 	setprop(Vac_inhg, 5);
 }
 
+
+# Fuel dump.
+var tank_lbs_L = "consumables/fuel/tank[0]/level-lbs";
+var tank_lbs_R = "consumables/fuel/tank[1]/level-lbs";
+var dumprate_lbs_min = getprop("sim/model/E-2C/controls/fuel/fuel-dump-rate") / 2; # has to be shared between 2 tanks.
+var dumprate_lbs_loop = dumprate_lbs_min / 60 * 6 * UPDATE_PERIOD;
+var dump_limit =  getprop("sim/model/E-2C/controls/fuel/fuel-dump-limit-lbs");
+
+var fuel_update = func {
+	var dumping_fuel_sw = getprop("sim/model/E-2C/controls/fuel/fuel-dump");
+	if (dumping_fuel_sw) {
+		var level_lbs_L = getprop(tank_lbs_L);
+		var level_lbs_R = getprop(tank_lbs_R);
+		if ( level_lbs_L > dump_limit ) {
+			var new_level_L = level_lbs_L - dumprate_lbs_loop;
+			setprop(tank_lbs_L, new_level_L);
+		}
+		if ( level_lbs_R > dump_limit ) {
+			var new_level_R = level_lbs_R - dumprate_lbs_loop;
+			setprop(tank_lbs_R, new_level_R);
+		}
+		if (( level_lbs_R < dump_limit ) and ( level_lbs_R < dump_limit )) {
+			setprop("sim/model/E-2C/controls/fuel/fuel-dump", 0)
+		}
+	}
+}
+
+
 # Main loop ###############
 var cnt = 0;
 
@@ -56,6 +84,7 @@ var main_loop = func {
 		chronograph.update_chrono();
 		if (( cnt == 6 ) or ( cnt == 12 )) {
 			# done each 0.3 sec.
+			fuel_update();
 			if ( cnt == 12 ) {
 				# done each 0.6 sec.
 				local_mag_deviation();
