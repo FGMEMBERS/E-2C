@@ -168,7 +168,7 @@
                              alt="37000"
                              flat-rating="4950"
                              min-n2="70"
-                             max-n2="106">
+                             max-n2="110">
                              <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
@@ -195,7 +195,7 @@
                              alt="37000"
                              flat-rating="4950"
                              min-n2="70"
-                             max-n2="106">
+                             max-n2="110">
                              <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
