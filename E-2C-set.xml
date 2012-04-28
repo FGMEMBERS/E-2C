@@ -158,9 +158,34 @@ Grumman E-2C simulation config.
 			<path>Aircraft/E-2C/Models/E-2C-Hawkeye.xml</path>
 			<E-2C>
 				<controls>
-					<rotodome>
-						<rotation-rpm>5</rotation-rpm>
-					</rotodome>
+					<engines>
+						<engine n="0">
+							<DEC-control type="int">2</DEC-control><!-- 0 = off, 1 = limiting, 2 = controling -->
+							<start-seq type="int">0</start-seq><!-- 0 = out of seq, > 0 = sequence steps -->
+						</engine>
+						<engine n="1">
+							<DEC-control type="int">2</DEC-control>
+							<start-seq type="int">0</start-seq>
+						</engine>
+					</engines>
+					<fuel>
+						<fuel-dump type="bool">0</fuel-dump>
+						<fuel-dump-rate type="double">1044</fuel-dump-rate><!-- lbs/minute -->
+						<fuel-dump-limit-lbs type="double">1240</fuel-dump-limit-lbs>
+						<tank-interconnect type="bool">0</tank-interconnect>
+					</fuel>
+					<propellers>
+						<propeller  n="0">
+							<NTS-running type="bool">0</NTS-running>
+						</propeller>
+						<propeller  n="1">
+							<NTS-running type="bool">0</NTS-running>
+						</propeller>
+						<auto-feather-arm type="bool">0</auto-feather-arm>
+						<feather-override-switch type="bool">0</feather-override-switch>
+						<fuel-gov-check type="int">0</fuel-gov-check>
+						<sync-master-stby type="bool">0</sync-master-stby>
+					</propellers>
 					<lighting>
 						<!--<anti-collision-switch type="bool">true</anti-collision-switch>-->
 						<!--<hook-bypass type="bool">false</hook-bypass>--><!-- false = carrier -->
@@ -169,15 +194,18 @@ Grumman E-2C simulation config.
 						<!--<position-wing-switch type="int">1</position-wing-switch>-->
 						<!--<position-flash-switch type="bool">true</position-flash-switch>-->
 					</lighting>
+					<rotodome>
+						<rotation-rpm>5</rotation-rpm>
+					</rotodome>
 				</controls>
 				<instrumentation>
 					<aoa-indexer>
-						<!-- target = 11.8 deg AoA -->
-						<too-slow-deg>13.4</too-slow-deg> <!-- target +1.6 deg -->
-						<slow-deg>12.6</slow-deg>         <!-- target +0.8 deg -->
-						<target-deg>11.8</target-deg>     <!-- target -->
-						<fast-deg>11.0</fast-deg>         <!-- target -0.8 deg -->
-						<too-fast-deg>10.4</too-fast-deg>  <!-- target -1.6 deg -->
+						<!-- target = 11.0 deg AoA (was 11.8) -->
+						<too-slow-deg>12.6</too-slow-deg> <!-- target +1.6 deg -->
+						<slow-deg>11.8</slow-deg>         <!-- target +0.8 deg -->
+						<target-deg>11.0</target-deg>     <!-- target -->
+						<fast-deg>10.2</fast-deg>         <!-- target -0.8 deg -->
+						<too-fast-deg>9.4</too-fast-deg>  <!-- target -1.6 deg -->
 					</aoa-indexer>
 					<radar-altimeter>
 						<limit-bug type="double">250</limit-bug>
