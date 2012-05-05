@@ -407,6 +407,17 @@
 
 
 <!-- Select/Deslect propellers groups -->
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Prplr-L</object-name>
+		<object-name>Prplr-R</object-name>
+		<object-name>Prplr-disk-L</object-name>
+		<object-name>Prplr-disk-R</object-name>
+	</effect>
+
+
+
+
 	<animation>
 		<type>select</type>
 		<object-name>Prplr-L</object-name>
