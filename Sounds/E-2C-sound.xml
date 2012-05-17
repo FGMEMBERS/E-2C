@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+	<fx>
+		<!-- Engines -->
+		<engine>
+			<name>engine-intake</name>
+			<mode>looped</mode>
+			<path>Sounds/turbojet_fan.wav</path>
+			<property>/engines/engine[1]/running</property>
+			<position>
+				<x>2.0</x>
+				<y>0.0</y>
+				<z>-2.0</z>
+			</position>
+			<volume>
+				<property>/engines/engine[1]/rpm</property>
+				<factor>0.0006</factor>
+				<min>0.00</min>
+				<max>1</max>
+			</volume>
+		</engine>
+		<propeller>
+			<name>propeller</name>
+			<mode>looped</mode>
+			<path>Aircraft/E-2C/Sounds/waspT56.wav</path>
+			<property>/engines/engine[1]/running</property>
+			<!-- <position>
+				<x>2.0</x>
+				<y>0.0</y>
+				<z>-2.0</z>
+			</position> -->
+			<volume>
+				<property>/engines/engine[1]/thrust-lbs</property>
+				<factor>0.0002</factor>
+				<min>0</min>
+				<max>1</max>
+			</volume>
+			<!-- <pitch>
+				<property>/engines/engine[1]/rpm</property>
+				<factor>0.0075</factor>
+				<min>0.3</min>
+				<max>5</max>
+				offset>0.3</offset>
+			</pitch> -->
+		</propeller>
+
+		<!-- Rumble -->
+		<rumble>
+			<name>rumble</name>
+			<mode>looped</mode>
+			<path>Sounds/rumble.wav</path>
+			<condition>
+				<or>
+					<property>gear/gear[0]/wow</property>
+					<property>gear/gear[1]/wow</property>
+					<property>gear/gear[2]/wow</property>
+				</or>
+			</condition>
+			<volume>
+				<property>velocities/groundspeed-kt</property>
+				<factor>0.005</factor>
+				<max>0.6</max>
+			</volume>
+		</rumble>
+
+		<!-- Gears -->
+		<gear-0-transit>
+			<name>gear-0-transit</name>
+			<mode>in-transit</mode>
+			<path>Sounds/gear.wav</path>
+			<property>gear/gear[0]/position-norm</property>
+			<volume><factor>1.1</factor></volume>
+		</gear-0-transit>
+		<gear-0-lock>
+			<name>gear-0-lock</name>
+			<path>Sounds/gear-lck.wav</path>
+			<condition>
+				<or>
+					<equals>
+						<property>gear/gear[0]/position-norm</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>gear/gear[0]/position-norm</property>
+						<value>0</value>
+					</equals>
+				</or>
+			</condition>
+			<volume><factor>0.7</factor></volume>
+		</gear-0-lock>
+
+
+		<!-- wind -->
+		<wind>
+			<name>wind</name>
+			<mode>looped</mode>
+			<path>Aircraft/E-2C/Sounds/wind.wav</path>
+			<condition>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>0</value>
+				</equals>
+				<greater-than>
+					<property>canopy/position-norm</property>
+					<value>0</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.001</factor>
+			</volume>
+		</wind>
+
+
+
+		<!-- Squeal -->
+		<squeal>
+			<name>squeal</name>
+			<path>Sounds/squeal.wav</path>
+			<condition>
+				<property>gear/gear[0]/wow</property>
+			</condition>
+			<volume>
+				<property>velocities/speed-down-fps</property>
+				<factor>0.05</factor>
+			</volume>
+			<volume>
+				<property>velocities/groundspeed-kt</property>
+				<factor>0.01</factor>
+			</volume>
+			<volume>
+				<internal>dt_stop</internal>
+				<factor>0.05</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>velocities/groundspeed-kt</property>
+				<factor>0.0025</factor>
+				<offset>1.2</offset>
+			</pitch>
+		</squeal>
+		<squeal>
+			<name>squeal</name>
+			<path>Sounds/squeal.wav</path>
+			<condition>
+				<property>gear/gear[1]/wow</property>
+			</condition>
+			<volume>
+				<property>velocities/speed-down-fps</property>
+				<factor>0.05</factor>
+			</volume>
+			<volume>
+				<property>velocities/groundspeed-kt</property>
+				<factor>0.01</factor>
+			</volume>
+			<volume>
+				<internal>dt_stop</internal>
+				<factor>0.05</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>velocities/airspeed-kt</property>
+				<factor>0.0025</factor>
+				<offset>1.2</offset>
+			</pitch>
+		</squeal>
+		<squeal>
+			<name>squeal</name>
+			<path>Sounds/squeal.wav</path>
+			<condition>
+				<property>gear/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<property>velocities/speed-down-fps</property>
+				<factor>0.05</factor>
+			</volume>
+			<volume>
+				<property>velocities/groundspeed-kt</property>
+				<factor>0.01</factor>
+			</volume>
+			<volume>
+				<internal>dt_stop</internal>
+				<factor>0.05</factor>
+				<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>velocities/groundspeed-kt</property>
+				<factor>0.0025</factor>
+				<offset>1.2</offset>
+			</pitch>
+		</squeal>
+
+		<flap-in-transit>
+			<name>flaps-in-transit</name>
+			<mode>in-transit</mode>
+			<path>Sounds/flaps.wav</path>
+			<property>surface-positions/flap-pos-norm</property>
+			<pitch>
+				<property>surface-positions/flap-pos-norm</property>
+				<factor>-0.1</factor>
+			</pitch>
+			<volume><factor>0.4</factor></volume>
+		</flap-in-transit>
+
+
+		<!-- stall warnings 
+		<pre-stall>
+			<name>pre-stall</name>
+			<mode>looped</mode>
+			<path>Aircraft/f-14b/Sounds/stall-600-chopped.wav</path>
+			<condition>
+				<greater-than>
+					<property>orientation/alpha-deg</property>
+					<value>18</value>
+				</greater-than>
+				<less-than-equals>
+					<property>orientation/alpha-deg</property>
+					<value>22.5</value>
+				</less-than-equals>
+				<greater-than>
+					<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+					<value>10</value>
+				</greater-than>
+				<or>
+					<equals>
+						<property>sim/current-view/name</property>
+						<value>Cockpit View</value>
+					</equals>
+					<equals>
+						<property>sim/current-view/name</property>
+						<value>RIO View</value>
+					</equals>
+				</or>
+			</condition>
+			<volume><factor>0.4</factor></volume>
+		</pre-stall>
+
+
+		<stall>
+			<name>stall</name>
+			<mode>looped</mode>
+			<path>Aircraft/f-14b/Sounds/stall-600-continue.wav</path>
+			<condition>
+				<greater-than>
+					<property>orientation/alpha-deg</property>
+					<value>22.5</value>
+				</greater-than>
+				<greater-than>
+					<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+					<value>10</value>
+				</greater-than>
+				<or>
+					<equals>
+						<property>sim/current-view/name</property>
+						<value>Cockpit View</value>
+					</equals>
+					<equals>
+						<property>sim/current-view/name</property>
+						<value>RIO View</value>
+					</equals>
+				</or>
+			</condition>
+			<volume><factor>0.6</factor></volume>
+		</stall>-->
+
+	</fx>
+
+</PropertyList>
