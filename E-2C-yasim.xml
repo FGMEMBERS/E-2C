@@ -80,7 +80,7 @@
         camber="0.016">
         <stall aoa="20" width="6" peak="1.5"/>
         <flap0 start="0.00" end="0.54" lift="1.45" drag="1.5"/>
-        <flap1 start="0.54" end="0.95" lift="1.3" drag="1.4"/>
+        <flap1 start="0.54" end="0.95" lift="1.15" drag="1.2"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
