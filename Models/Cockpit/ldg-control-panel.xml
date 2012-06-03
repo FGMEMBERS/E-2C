@@ -64,8 +64,19 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>red-light-on</object-name>
 		<object-name>lgt-handle</object-name>
+		<condition>
+			<greater-than><property>gear/gear[0]/position-norm</property><value>0</value></greater-than>
+			<less-than><property>gear/gear[0]/position-norm</property><value>1</value></less-than>
+			<greater-than><property>gear/gear[1]/position-norm</property><value>0</value></greater-than>
+			<less-than><property>gear/gear[1]/position-norm</property><value>1</value></less-than>
+			<greater-than><property>gear/gear[2]/position-norm</property><value>0</value></greater-than>
+			<less-than><property>gear/gear[2]/position-norm</property><value>1</value></less-than>
+		</condition>  
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>red-light-on</object-name>
 		<condition>
 			<greater-than><property>gear/gear[0]/position-norm</property><value>0</value></greater-than>
 			<less-than><property>gear/gear[0]/position-norm</property><value>1</value></less-than>
@@ -80,7 +91,7 @@
 	<animation>
 		<type>light</type>
 		<light-type>point</light-type>
-		<name>lgt-handle</name>
+		<name>ligth-handle-anim</name>
 		<object-name>lgt-handle</object-name>
 		<position><x>-7.2881</x><y>-0.1265</y><z>-0.6272</z></position>
 		<direction><x>0</x><y>0</y><z>0</z></direction>
@@ -93,7 +104,24 @@
 		<near-m>0.00</near-m>
 		<far-m>0.20</far-m>
 	</animation>
+	<!--<animation>
+		<type>rotate</type>
+		<object-name>lgt-handle</object-name>
+		<property>sim/model/E-2C/controls/gear/lgt-handle</property>
+		<factor>42</factor>  
+		<center>
+			<x-m>-7.3106</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.8213</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>-->
 
+		
 
 
 
