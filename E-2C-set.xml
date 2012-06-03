@@ -176,6 +176,16 @@ Grumman E-2C simulation config.
 					</fuel>
 					<gear>
 						<ld-gear-handle-anim type="double">0</ld-gear-handle-anim>
+						<!-- light position animation should be in the model animation but this is not possible yet. -->
+						<ld-gear-handle-light-anim type="double">
+							<center-x-m>-7.3106</center-x-m><!-- move center -->
+							<center-z-m>-0.8213</center-z-m>
+							<x-m>0</x-m><!-- light position -->
+							<z-m>0</z-m>
+							<radius-m>0.1957</radius-m>
+							<start-angle-deg>-5.8</start-angle-deg>
+							<end-angle-deg>-47.8</end-angle-deg>
+						</ld-gear-handle-light-anim>
 					</gear>
 					<propellers>
 						<propeller  n="0">

@@ -26,7 +26,8 @@
 # undercarriage retraction when on ground.
 
 controls.gearDown = func(v) {
-	wow = getprop ("/gear/gear[1]/wow") or getprop ("/gear/gear[2]/wow");    if (v < 0 and ! wow) {
+	wow = getprop ("/gear/gear[1]/wow") or getprop ("/gear/gear[2]/wow");
+    if (v < 0 and ! wow) {
     setprop("/controls/gear/gear-down", 0);
   } elsif (v > 0) {
     setprop("/controls/gear/gear-down", 1);
@@ -41,6 +42,8 @@ setlistener( "controls/gear/gear-down", func { ldg_hdl_main(); } );
 var ld_hdl = props.globals.getNode("sim/model/E-2C/controls/gear/ld-gear-handle-anim", 1);
 
 var ldg_hdl_main = func {
+	# Landing gear handle normalized position, it moves much faster (0,5 sec) than the actual under carriage.
+	# Checks if the move is completed, else compute a new normalized postion. 
 	var pos = ld_hdl.getValue();
 	if ( getprop("controls/gear/gear-down") == 1 ) {
 		if ( pos > -1 ) {
@@ -52,9 +55,10 @@ var ldg_hdl_main = func {
 }
 
 var ldg_hdl_anim = func {
+	# Increments the handle normalized position,
 	var incr = arg[0]/10;
 	var pos = arg[1] + incr;
-	if ( ( arg[0] = 1 ) and ( pos >= 0 ) ) {    
+	if ( ( arg[0] = 1 ) and ( pos >= 0 ) ) {
 		ld_hdl.setDoubleValue(0);
 	} elsif ( ( arg[0] = -1 ) and ( pos <= -1 ) ) {
 		ld_hdl.setDoubleValue(-1);
