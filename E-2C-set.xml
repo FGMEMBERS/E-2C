@@ -284,7 +284,7 @@ Grumman E-2C simulation config.
 
 
 	<input>
-		<keyboard include="../../Input/Keyboard/carrier-bindings.xml">
+		<keyboard include="/Input/Keyboard/carrier-bindings.xml">
 		</keyboard>
 	</input>
 
