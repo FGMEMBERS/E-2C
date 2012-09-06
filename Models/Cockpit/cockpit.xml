@@ -56,16 +56,23 @@
 <!-- ******************************************************************* -->
 
 
-	<!-- Stick 
+	<!-- Yokes -->
 	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/stick.xml</path>
+		<path>Aircraft/E-2C/Models/Cockpit/yoke.xml</path>
 		<offsets>
-			<x-m>-5.6170</x-m>
-			<y-m>0.0000</y-m>
-			<z-m>-0.5898</z-m>
+			<x-m>-7.3946</x-m>
+			<y-m>-0.4520</y-m>
+			<z-m>-0.6551</z-m>
 		</offsets>
-		<pitch-deg>-5</pitch-deg>
-	</model>-->
+	</model>
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/yoke.xml</path>
+		<offsets>
+			<x-m>-7.3946</x-m>
+			<y-m>0.4520</y-m>
+			<z-m>-0.6551</z-m>
+		</offsets>
+	</model>
 
 
 
@@ -74,9 +81,29 @@
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/chronograph.xml</path>
 		<offsets>
-			<x-m>-7.6763</x-m>
-			<y-m>-0.6346</y-m>
-			<z-m>-0.6061</z-m>
+			<x-m>-7.6770</x-m>
+			<y-m>-0.6258</y-m>
+			<z-m>-0.6007</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/stdby-adi.xml</path>
+		<offsets>
+			<x-m>-7.7110</x-m>
+			<y-m>-0.3321</y-m>
+			<z-m>-0.4760</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/master-caution.xml</path>
+		<offsets>
+			<x-m>-7.7031</x-m>
+			<y-m>-0.5140</y-m>
+			<z-m>-0.5052</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
@@ -84,9 +111,9 @@
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/radar-altimeter.xml</path>
 		<offsets>
-			<x-m>-7.6567</x-m>
-			<y-m>-0.6437</y-m>
-			<z-m>-0.6787</z-m>
+			<x-m>-7.6583</x-m>
+			<y-m>-0.6385</y-m>
+			<z-m>-0.6744</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
@@ -95,9 +122,9 @@
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/bdhi.xml</path>
 		<offsets>
-			<x-m>-7.6899</x-m>
-			<y-m>-0.3347</y-m>
-			<z-m>-0.5379</z-m>
+			<x-m>-7.6898</x-m>
+			<y-m>-0.3449</y-m>
+			<z-m>-0.5514</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
@@ -105,9 +132,9 @@
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/aoa-gauge.xml</path>
 		<offsets>
-			<x-m>-7.7158</x-m>
-			<y-m>-0.3985</y-m>
-			<z-m>-0.4584</z-m>
+			<x-m>-7.7091</x-m>
+			<y-m>-0.3925</y-m>
+			<z-m>-0.4761</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
@@ -115,9 +142,9 @@
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/adi.xml</path>
 		<offsets>
-			<x-m>-7.6858</x-m>
-			<y-m>-0.4483</y-m>
-			<z-m>-0.5702</z-m>
+			<x-m>-7.6852</x-m>
+			<y-m>-0.4482</y-m>
+			<z-m>-0.5690</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
@@ -125,9 +152,9 @@
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/vsi.xml</path>
 		<offsets>
-			<x-m>-7.6559</x-m>
-			<y-m>-0.4845</y-m>
-			<z-m>-0.6683</z-m>
+			<x-m>-7.6603</x-m>
+			<y-m>-0.4788</y-m>
+			<z-m>-0.6619</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
@@ -135,9 +162,9 @@
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/asi.xml</path>
 		<offsets>
-			<x-m>-7.6789</x-m>
-			<y-m>-0.5596</y-m>
-			<z-m>-0.5959</z-m>
+			<x-m>-7.6801</x-m>
+			<y-m>-0.5527</y-m>
+			<z-m>-0.5885</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
@@ -145,9 +172,9 @@
 	<model>
 		<path>Aircraft/Instruments-3d/altimeter/altimeter.xml</path>
 		<offsets>
-			<x-m>-7.6568</x-m>
-			<y-m>-0.5596</y-m>
-			<z-m>-0.6791</z-m>
+			<x-m>-7.6572</x-m>
+			<y-m>-0.5527</y-m>
+			<z-m>-0.6743</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>
@@ -156,8 +183,18 @@
 		<path>Aircraft/E-2C/Models/Cockpit/fuel-gauge.xml</path>
 		<offsets>
 			<x-m>-7.6587</x-m>
-			<y-m>-0.2607</y-m>
+			<y-m>-0.2691</y-m>
 			<z-m>-0.6719</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/checklist-landing.xml</path>
+		<offsets>
+			<x-m>-7.6604</x-m>
+			<y-m>-0.6989</y-m>
+			<z-m>-0.6677</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 	</model>

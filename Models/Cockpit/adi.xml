@@ -18,32 +18,15 @@
 		<type>rotate</type>
 		<object-name>sphere</object-name>
 		<property>instrumentation/attitude-indicator/indicated-roll-deg</property>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0.0</y-m>
-			<z-m>0.0</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
+		<axis><x>1</x></axis>
 	</animation>
 
 	<animation>
 		<type>rotate</type>
 		<object-name>sphere</object-name>
 		<property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
-		<center>
-			<x-m>-0.0522</x-m>
-			<y-m>0.0</y-m>
-			<z-m>0.0023</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
+		<center><x-m>-0.0396</x-m><z-m>0.0008</z-m></center>
+		<axis><y>1</y></axis>
 	</animation>
 
 	<animation>
@@ -52,8 +35,8 @@
 		<property>instrumentation/turn-indicator/indicated-turn-rate</property>
 		<factor>0.0114</factor>
 		<axis><y>1</y></axis>
-		<min-m>-0.0185</min-m>
-		<max-m>0.0185</max-m>
+		<min-m>-0.0163</min-m>
+		<max-m>0.0163</max-m>
 	</animation>
 	<!--based on 1.08 indicated-turn-rate corresponding to a standard 360° turn in 2 minutes at cruise configuration (FL 320 M0.72) -->
 
@@ -135,79 +118,13 @@
 		<property>instrumentation/attitude-indicator/indicated-roll-deg</property>
 		<min-deg>-120</min-deg>
 		<max-deg>120</max-deg>
-		<center>
-			<x-m>-0.0015</x-m>
-			<y-m>0</y-m>
-			<z-m>0.0064</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
+		<center><z-m>0.0049</z-m></center>
+		<axis><x>-1</x></axis>
 	</animation>
 
-	<!-- ADI's bars in steering mode -->
-	<animation>
-		<type>select</type>
-		<object-name>yaw-steering-bar</object-name>
-		<condition>
-			<equals>
-				<property>sim/model/E-2C/nav/selector-ptr</property>
-				<value>false</value>
-			</equals>
-		</condition>
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>yaw-steering-bar</object-name>
-		<condition>
-			<equals>
-				<property>sim/model/E-2C/nav/selector-ptr</property>
-				<value>false</value>
-			</equals>
-		</condition>
-		<property>controls/flight/aileron</property>
-		<factor>0.025</factor>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>select</type>
-		<object-name>pitch-steering-bar</object-name>
-		<condition>
-			<equals>
-				<property>sim/model/E-2C/nav/selector-ptr</property>
-				<value>false</value>
-			</equals>
-		</condition>
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>pitch-steering-bar</object-name>
-		<condition>
-			<equals>
-				<property>sim/model/E-2C/nav/selector-ptr</property>
-				<value>false</value>
-			</equals>
-		</condition>
-		<property>controls/flight/elevator</property>
-		<factor>0.03</factor>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-
-<!-- ADI's bars in homing mode -->
-
+	
+<!-- ADI's bars in ILS/ACLS mode -->
+<!-- FIXME -->
 	<animation>
 		<type>select</type>
 		<object-name>nav-yaw-steering-bar</object-name>
@@ -281,34 +198,6 @@
 		</axis>
 	</animation>
 
-	<!-- course-flag -->
-	<animation>
-		<type>select</type>
-		<object-name>course-flag</object-name>
-		<condition>
-			<or>
-				<and>
-					<property>sim/model/E-2C/nav/selector-ptr</property>
-					<not>
-						<property>instrumentation/nav[2]/in-range</property>
-					</not>
-					<equals>
-						<property>sim/model/E-2C/instrumentation/vhf/mode</property>
-						<value>2</value>
-					</equals>
-					<greater-than>
-						<property>sim/model/E-2C/instrumentation/vhf/selector</property>
-						<value>2</value>
-					</greater-than>
-				</and>
-				<less-than>
-					<property>systems/electrical/outputs/adi</property>
-					<value>24</value>
-				</less-than>
-			</or>
-		</condition>
-	</animation>
-
 	<!-- slip-ball-->
 	<animation>
 		<type>rotate</type>
@@ -317,16 +206,8 @@
 		<factor>8</factor>
 		<min-deg>-11</min-deg>
 		<max-deg>11</max-deg>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0.0279031</z-m> 
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
+		<center><z-m>0.0279031</z-m></center>
+		<axis><x>-1</x></axis>
 	</animation>
 
 	<!-- lighting -->

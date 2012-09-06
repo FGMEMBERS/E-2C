@@ -45,28 +45,13 @@
 	<animation>
 		<type>pick</type>
 		<visible>true</visible>
-		<object-name>hotspot-fuel-dump-up</object-name>
+		<object-name>fuel-dump-sw</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>property-assign</command>
-					<property>sim/model/E-2C/controls/fuel/fuel-dump</property>
-					<value>true</value>
-			</binding>
-		</action>
-	</animation> 
-	<animation>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>hotspot-fuel-dump-down</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-				<command>property-assign</command>
-					<property>sim/model/E-2C/controls/fuel/fuel-dump</property>
-					<value>false</value>
+				<command>property-toggle</command>
+				<property>sim/model/E-2C/controls/fuel/fuel-dump</property>
 			</binding>
 		</action>
 	</animation> 

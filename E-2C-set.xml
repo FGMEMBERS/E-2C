@@ -61,10 +61,10 @@ Grumman E-2C simulation config.
 			<type>lookfrom</type>
 			<internal type="bool">true</internal>
 			<config>
-				<x-offset-m>-0.4</x-offset-m>
-				<y-offset-m>-0.12</y-offset-m>
+				<x-offset-m>-0.45</x-offset-m>
+				<y-offset-m>-0.072</y-offset-m>
 				<z-offset-m>-6.9</z-offset-m>
-				<pitch-offset-deg>-17.85</pitch-offset-deg>
+				<pitch-offset-deg>-16.5</pitch-offset-deg>
 				<default-field-of-view-deg>55</default-field-of-view-deg>
 				<!--<limits>
 					<enabled type="bool">true</enabled>
@@ -223,6 +223,9 @@ Grumman E-2C simulation config.
 					<radar-altimeter>
 						<limit-bug type="double">250</limit-bug>
 					</radar-altimeter>
+					<warnings>
+						<master-caution type="bool">0</master-caution>
+					</warnings>
 				</instrumentation>
 			</E-2C>
 

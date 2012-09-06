@@ -101,7 +101,7 @@
          sweep="4"
          camber="0.0">
          <stall aoa="35" width="16" peak="1.5"/><!-- they wont stall, they are eavily blowed by the props -->
-         <flap0 start="0.55" end="3.68" lift="1.45" drag="1.6"/>
+         <flap0 start="0.55" end="3.68" lift="1.375" drag="1.6"/>
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
 
