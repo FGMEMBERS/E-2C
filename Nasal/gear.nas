@@ -23,10 +23,11 @@
 # GearDown Control
 # ----------------
 # Hijacked Gear handling so we have a Weight on Wheel security to prevent
-# undercarriage retraction when on ground.
+# undercarriage retraction when on ground. Air-ground safety switch located on
+# the left main gear.
 
 controls.gearDown = func(v) {
-	wow = getprop ("/gear/gear[1]/wow") or getprop ("/gear/gear[2]/wow");
+	wow = getprop ("/gear/gear[1]/wow");
     if (v < 0 and ! wow) {
     setprop("/controls/gear/gear-down", 0);
   } elsif (v > 0) {

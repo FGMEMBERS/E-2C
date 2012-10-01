@@ -12,13 +12,13 @@
      Height         : 18.31 ft      5.58 m
 
      Engines        : Two 3,803 kW (5,100 Effective HP) Allison T56-A-427 turboprops
-                      13820 RPM, 880 kg (1940 lbs)
+                      14,239 RPM, 880 kg (1,940 lbs)
      Propellers     : Hamilton Standard 54460-1 242 lbs (20kg*4 blades + 30kg head = 110kg = 242 lbs)
-                      diameter 13.5 ft 4.11 m
+                      diameter 13.5 ft 4.11 m, 1,106 RPM
 
-     Empty weight   : 40484 lbs    18363 kg
-     Max TO weight  : 54426 lbs    24687 kg
-     Max fuel       : 12400 lbs     5624 kg
+     Empty weight   : 40,484 lbs    18 363 kg
+     Max TO weight  : 54,426 lbs    24 687 kg
+     Max fuel       : 12,400 lbs     5 624 kg
 
      Max level speed: 338 kts
      Cruise speed   : 325 kts
@@ -26,7 +26,7 @@
      Approach speed : 103 kts
      Stall speed    :  75 kts
 
-     Service ceiling: 37000 ft
+     Service ceiling: 37,000 ft
      Mission range  : 4 h 24
      Ferry range    : 6 h 15
 
@@ -159,50 +159,65 @@
              cruise-rpm="1020"
              cruise-power="5100"
              cruise-alt="37000"
-             min-rpm="663"
-             max-rpm="1020">
+             min-rpm="1000"
+             max-rpm="1052"
+             fine-stop="0.1"
+             coarse-stop="6.0"
+>
              <actionpt x="4.132" y="3.169" z="0.029"/>
-             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="PROP"/>
-             <turbine-engine eng-power="5100"
+             <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
+             <turbine-engine eng-power="5823"
                              eng-rpm="1020"
                              alt="37000"
-                             flat-rating="4950"
+                             flat-rating="5823"
                              min-n2="70"
-                             max-n2="110">
+                             max-n2="110"
+                             bsfc="0.470">
                              <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
                              <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
-
              </turbine-engine>
   </propeller>
+<!--
+             fine-stop="0.6"
+             coarse-stop="3.0"
+             manual-pitch="1"
+-->
 
   <!-- Engine right -->
   <propeller x="2.743" y="-3.169" z="-0.422"
-             mass="2182" 
-             moment="154" 
-             radius="2.055" 
-             cruise-speed="425" 
-             cruise-rpm="1020" 
-             cruise-power="5100" 
-             cruise-alt="37000" 
-             min-rpm="663" 
-             max-rpm="1020"> 
+             mass="2182"
+             moment="154"
+             radius="2.055"
+             cruise-speed="425"
+             cruise-rpm="1020"
+             cruise-power="5100"
+             cruise-alt="37000"
+             min-rpm="1000"
+             max-rpm="1052"
+             fine-stop="0.1"
+             coarse-stop="6.0">
              <actionpt x="4.132" y="-3.169" z="0.029"/>
-             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="PROP"/>
-             <turbine-engine eng-power="5100"
+             <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
+             <turbine-engine eng-power="5823"
                              eng-rpm="1020"
                              alt="37000"
-                             flat-rating="4950"
+                             flat-rating="5823"
                              min-n2="70"
-                             max-n2="110">
+                             max-n2="110"
+                             bsfc="0.470">
                              <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
                              <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
-
              </turbine-engine>
     </propeller>
+<!--
+             fine-stop="0.6"
+             coarse-stop="3.0"
+             manual-pitch="1"
+-->
 
 
     <!-- Nose wheel --><!-- steering output: /gear/gear/caster-angle-deg (float) -->
