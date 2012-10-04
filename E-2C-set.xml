@@ -63,8 +63,8 @@ Grumman E-2C simulation config.
 			<config>
 				<x-offset-m>-0.45</x-offset-m>
 				<y-offset-m>-0.072</y-offset-m>
-				<z-offset-m>-6.9</z-offset-m>
-				<pitch-offset-deg>-16.5</pitch-offset-deg>
+				<z-offset-m>-6.85</z-offset-m>
+				<pitch-offset-deg>-17</pitch-offset-deg>
 				<default-field-of-view-deg>55</default-field-of-view-deg>
 				<!--<limits>
 					<enabled type="bool">true</enabled>
