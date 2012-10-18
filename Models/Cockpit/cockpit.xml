@@ -199,6 +199,16 @@
 		</offsets>
 	</model>
 
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/light-panel-main-right.xml</path>
+		<offsets>
+			<x-m>-7.6383</x-m>
+			<y-m>-0.6357</y-m>
+			<z-m>-0.7477</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
 
 	<!-- Windshield Indicators -->
 	<model>
