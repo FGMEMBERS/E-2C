@@ -66,14 +66,14 @@
 
 	<!-- Clock Setting Knob -->
 	<animation>
-		<name>time-offset-left-fine</name>
+		<name>time-offset-down</name>
 		<type>pick</type>
 		<visible>true</visible>
-		<object-name>time-offset-left</object-name>
+		<object-name>knob</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
+			<interval-sec>0.05</interval-sec>
 			<binding>
 				<command>property-adjust</command>
 				<property>instrumentation/clock/offset-sec</property>
@@ -82,50 +82,18 @@
 		</action>
 	</animation>
 	<animation>
-		<name>time-offset-left-hours</name>
+		<name>time-offset-up</name>
 		<type>pick</type>
 		<visible>true</visible>
-		<object-name>time-offset-left</object-name>
-		<action>
-			<button>1</button>
-			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
-			<binding>
-				<command>property-adjust</command>
-				<property>instrumentation/clock/offset-sec</property>
-				<step>-3600</step>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<name>time-offset-right-fine</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>time-offset-right</object-name>
+		<object-name>knob</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
+			<interval-sec>0.05</interval-sec>
 			<binding>
 				<command>property-adjust</command>
 				<property>instrumentation/clock/offset-sec</property>
 				<step>60</step>
-			</binding>
-		</action>
-	</animation>
-	<animation>
-		<name>time-offset-right-hours</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>time-offset-right</object-name>
-		<action>
-			<button>1</button>
-			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
-			<binding>
-				<command>property-adjust</command>
-				<property>instrumentation/clock/offset-sec</property>
-				<step>3600</step>
 			</binding>
 		</action>
 	</animation>
@@ -150,28 +118,9 @@
 
 	<!-- lighting -->
 	<animation> 
-		<object-name>mount</object-name>
+		<object-name>panel</object-name>
 		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation> 
-		<object-name>knob</object-name>
-		<type>material</type>
-		<emission> 
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation> 
-		<object-name>button</object-name>
-		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 		<emission> 
 			<factor-prop>controls/lighting/panel-norm</factor-prop>
 			<red>0.55</red>
@@ -181,19 +130,10 @@
 	</animation>
 	<animation>
 		<type>material</type>
-		<object-name>face</object-name>
+		<object-name>instrument</object-name>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 		<emission> 
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation>
-		<type>material</type>
-		<object-name>needles</object-name>
-		<emission> 
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<factor-prop>controls/lighting/instruments-primary-norm</factor-prop>
 			<red>0.55</red>
 			<green>0.24</green>
 			<blue>0.10</blue>
@@ -207,4 +147,5 @@
 		<min-m>0</min-m>
 		<max-m>35</max-m>
 	</animation>
+
 </PropertyList>

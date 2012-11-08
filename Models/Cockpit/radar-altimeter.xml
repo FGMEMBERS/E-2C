@@ -209,15 +209,16 @@
 	</animation>
 
 	<!-- Minimal Altitude Limit Bug Setting Knob -->
+
 	<animation>
-		<name>low-knob-left-fine</name>
+		<name>knob-down</name>
 		<type>pick</type>
 		<visible>true</visible>
-		<object-name>low-knob-left</object-name>
+		<object-name>knob</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
+			<interval-sec>0.05</interval-sec>
 			<binding>
 				<command>property-adjust</command>
 				<property>sim/model/E-2C/instrumentation/radar-altimeter/limit-bug</property>
@@ -228,32 +229,14 @@
 	</animation>
 
 	<animation>
-		<name>low-knob-left-coarse</name>
+		<name>knob-up</name>
 		<type>pick</type>
 		<visible>true</visible>
-		<object-name>low-knob-left</object-name>
+		<object-name>knob</object-name>
 		<action>
 			<button>1</button>
 			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
-			<binding>
-				<command>property-adjust</command>
-				<property>sim/model/E-2C/instrumentation/radar-altimeter/limit-bug</property>
-				<step>-100</step>
-				<min>50</min>
-			</binding>
-		</action>
-	</animation>
-
-	<animation>
-		<name>low-knob-right-fine</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>low-knob-right</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
+			<interval-sec>0.05</interval-sec>
 			<binding>
 				<command>property-adjust</command>
 				<property>sim/model/E-2C/instrumentation/radar-altimeter/limit-bug</property>
@@ -263,29 +246,13 @@
 		</action>
 	</animation>
 
-	<animation>
-		<name>low-knob-right-coarse</name>
-		<type>pick</type>
-		<visible>true</visible>
-		<object-name>low-knob-right</object-name>
-		<action>
-			<button>1</button>
-			<repeatable>true</repeatable>
-			<interval-sec>0.2</interval-sec>
-			<binding>
-				<command>property-adjust</command>
-				<property>sim/model/E-2C/instrumentation/radar-altimeter/limit-bug</property>
-				<step>100</step>
-				<max>5000</max>
-			</binding>
-		</action>
-	</animation>
 
 
 <!-- lighting -->
 	<animation> 
 		<object-name>mount</object-name>
 		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 		 <emission>
 			<factor-prop>controls/lighting/panel-norm</factor-prop>
 			<red>0.55</red>
@@ -294,50 +261,11 @@
 		</emission>
 	</animation>
 	<animation>
-		<object-name>face</object-name> 
+		<object-name>instrument</object-name> 
 		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 		<emission> 
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>needle</object-name> 
-		<type>material</type>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>stowed-needle</object-name> 
-		<type>material</type>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>off-flag</object-name> 
-		<type>material</type>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-	<animation>
-		<object-name>bug</object-name> 
-		<type>material</type>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<factor-prop>controls/lighting/instruments-primary-norm</factor-prop>
 			<red>0.55</red>
 			<green>0.24</green>
 			<blue>0.10</blue>
@@ -346,8 +274,9 @@
 	<animation>
 		<object-name>low-lamp-off</object-name> 
 		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<factor-prop>controls/lighting/instruments-primary-norm</factor-prop>
 			<red>0.1375</red>
 			<green>0.06</green>
 			<blue>0.025</blue>
@@ -356,6 +285,7 @@
 	<animation>
 		<object-name>low-lamp</object-name> 
 		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 		<emission>
 			<red>0.8</red>
 			<green>0.8</green>

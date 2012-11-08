@@ -2,25 +2,83 @@
 
 <PropertyList>
 
-	<name>light-panel-main-right</name>
-	<path>light-panel-main-right.ac</path>
+	<name>light-panel-main-left</name>
+	<path>light-panel-main-left.ac</path>
 
-	<!--<animation>
-		<type>select</type>
-		<object-name>master-caution-on</object-name>
-		<condition>
-			<property>sim/model/f-14b/instrumentation/warnings/master-caution</property>
-		</condition>
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>primary-knob</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/instruments-primary-norm</property>
+				<step>0.1</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/instruments-primary-norm</property>
+				<step>-0.1</step>
+				<min>0</min>
+			</binding>
+		</action>
 	</animation>
 	<animation>
-		<type>select</type>
-		<object-name>master-caution-off</object-name>
-		<condition>
-			<not>
-				<property>sim/model/f-14b/instrumentation/warnings/master-caution</property>
-			</not>
-		</condition>
-	</animation>-->
+		<type>rotate</type>
+		<object-name>primary-knob</object-name>
+		<property>controls/lighting/instruments-primary-norm</property>
+		<factor>300</factor>
+		<center><y-m>-0.0245</y-m><z-m>0.0073</z-m></center>
+		<axis><x>-1</x></axis>
+	</animation>
+
+
+
+
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>secondary-knob</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/instruments-secondary-norm</property>
+				<step>0.1</step>
+				<max>1</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<repeatable>true</repeatable>
+			<interval-sec>0.1</interval-sec>
+			<binding>
+				<command>property-adjust</command>
+				<property>controls/lighting/instruments-secondary-norm</property>
+				<step>-0.1</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>secondary-knob</object-name>
+		<property>controls/lighting/instruments-secondary-norm</property>
+		<factor>300</factor>
+		<center><y-m>0.0277</y-m><z-m>0.0024</z-m></center>
+		<axis><x>-1</x></axis>
+	</animation>
 
 <!-- lighting 
 

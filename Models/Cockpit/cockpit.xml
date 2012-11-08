@@ -77,7 +77,7 @@
 
 
 
-	<!-- Main Panel -->
+	<!-- Main Panel Pilot -->
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/chronograph.xml</path>
 		<offsets>
@@ -170,7 +170,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/Instruments-3d/altimeter/altimeter.xml</path>
+		<path>Aircraft/E-2C/Models/Cockpit/altimeter.xml</path>
 		<offsets>
 			<x-m>-7.6572</x-m>
 			<y-m>-0.5527</y-m>
@@ -190,6 +190,16 @@
 	</model>
 
 	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/turbine-temp-gauge.xml</path>
+		<offsets>
+			<x-m>-7.6817</x-m>
+			<y-m>-0.2691</y-m>
+			<z-m>-0.5856</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/checklist-landing.xml</path>
 		<offsets>
 			<x-m>-7.6604</x-m>
@@ -200,10 +210,23 @@
 	</model>
 
 	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/light-panel-main-right.xml</path>
+		<path>Aircraft/E-2C/Models/Cockpit/light-panel-main-left.xml</path>
 		<offsets>
 			<x-m>-7.6383</x-m>
 			<y-m>-0.6357</y-m>
+			<z-m>-0.7477</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+
+
+	<!-- Main Panel Copilot -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/light-panel-main-right.xml</path>
+		<offsets>
+			<x-m>-7.6383</x-m>
+			<y-m>0.6357</y-m>
 			<z-m>-0.7477</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
@@ -234,7 +257,8 @@
 		</offsets>
 	</model>
 
-<!-- Pedestal -->
+
+	<!-- Pedestal -->
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/ldg-control-panel.xml</path>
 		<offsets>
@@ -245,32 +269,6 @@
 	</model>
 
 
-	<!-- Overhead panels -->
-	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/overhead-L.xml</path>
-		<offsets>
-			<x-m>-7.2864</x-m>
-			<y-m>-0.3721</y-m>
-			<z-m>0.0942</z-m>
-			<pitch-deg>19.25</pitch-deg>
-			<roll-deg>2.25</roll-deg>
-			<heading-deg>10</heading-deg>
-		</offsets>
-	</model>
-
-
-	<!-- Overhead panels -->
-	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/overhead-L.xml</path>
-		<offsets>
-			<x-m>-7.2864</x-m>
-			<y-m>-0.3721</y-m>
-			<z-m>0.0942</z-m>
-			<pitch-deg>19.25</pitch-deg>
-			<roll-deg>2.25</roll-deg>
-			<heading-deg>10</heading-deg>
-		</offsets>
-	</model>
 
 
 <!-- ******************************************************************* -->

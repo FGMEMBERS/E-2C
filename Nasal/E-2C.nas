@@ -42,6 +42,16 @@ var vacuum_update = func {
 }
 
 
+
+# Lighting ################
+aircraft.data.add(
+	"controls/lighting/instruments-primary-norm",
+	"controls/lighting/instruments-secondary-norm",
+	"controls/lighting/panel-norm"
+	);
+
+
+
 # Fuel dump.
 var tank_lbs_L = "consumables/fuel/tank[0]/level-lbs";
 var tank_lbs_R = "consumables/fuel/tank[1]/level-lbs";
@@ -94,6 +104,7 @@ var main_loop = func {
 	} else {
 		# done each 0.1 sec, cnt odd.
 		vacuum_update();
+		update_engines();
 		if (( cnt == 5 ) or ( cnt == 11 )) {
 			# done each 0.3 sec.
 			if ( cnt == 11 ) {

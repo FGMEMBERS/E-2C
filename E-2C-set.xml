@@ -267,6 +267,14 @@ Grumman E-2C simulation config.
 				<name>f/F</name>
 				<desc>Wing Fold up/down</desc>
 			</key>
+			<key>
+				<name>Ctrl-b</name>
+				<desc>Move head left</desc>
+			</key>
+			<key>
+				<name>Ctrl-n</name>
+				<desc>Move head right</desc>
+			</key>
 		</help>
 
 	</sim>
@@ -283,20 +291,42 @@ Grumman E-2C simulation config.
 				<propeller-pitch>1</propeller-pitch>
 			</engine>
 		</engines>
+		<lighting>
+			<instruments-primary-norm type="double">0</instruments-primary-norm>
+			<instruments-secondary-norm type="double">0</instruments-secondary-norm>
+		</lighting>
 	</controls>
 
 
 	<input>
 		<keyboard include="/Input/Keyboard/carrier-bindings.xml">
+			<key n="2">
+				<name>CTRL-b</name>
+				<desc>Move slightly the PoV toward left.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>E_2C.slidePov(-1);</script>
+				</binding>
+			</key>
+			<key n="14">
+				<name>CTRL-n</name>
+				<desc>Move slightly the PoV toward right.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>E_2C.slidePov(1);</script>
+				</binding>
+			</key>
 		</keyboard>
 	</input>
 
 
 	<nasal>
-		<E-2C>
+		<E_2C>
 			<file>Aircraft/E-2C/Nasal/E-2C.nas</file>
 			<file>Aircraft/E-2C/Nasal/gear.nas</file>
-		</E-2C>
+			<file>Aircraft/E-2C/Nasal/engines.nas</file>
+			<file>Aircraft/E-2C/Nasal/view.nas</file>
+		</E_2C>
 		<chronograph>
 			<file>Aircraft/E-2C/Nasal/chronograph.nas</file>
 		</chronograph>
