@@ -796,7 +796,7 @@
 		<type>rotate</type>
 		<object-name>UC-NCatLink</object-name>
 		<property>gear/launchbar/position-norm</property>
-		<factor>76</factor>
+		<factor>80</factor>
 		<center><x-m>-8.0618</x-m><y-m>0</y-m><z-m>-2.4477</z-m></center>
 		<axis><y>-1</y></axis>
 	</animation>
