@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>cockpit-model.ac</path>
+
+<!-- lighting -->
+
+	<animation>
+		<object-name>panels-main</object-name>
+		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
+		<emission>
+			<factor-prop>controls/lighting/instruments-primary-norm</factor-prop>
+			<red>0.0363</red>
+			<green>0.0158</green>
+			<blue>0.0066</blue>
+		</emission>
+	</animation>	
+
+</PropertyList>
+

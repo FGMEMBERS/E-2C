@@ -13,32 +13,6 @@
 <!-- ******************************************************************* -->
 
 
-<!-- ###### De-select when in Cockpit View ###### -->
-	<animation>
-		<type>select</type>
-		<object-name>pilot2</object-name>
-		<condition>
-			<not>
-				<equals>
-					<property>sim/current-view/name</property>
-					<value>Cockpit View</value>
-				</equals>
-			</not>
-		</condition>
-	</animation>
-<!-- ###### De-select when in Navigator View ###### 
-	<animation>
-		<type>select</type>
-		<object-name>R-Pilot</object-name>
-		<condition>
-			<not>
-				<equals>
-					<property>sim/current-view/name</property>
-					<value>Navigator View</value>
-				</equals>
-			</not>
-		</condition>
-	</animation>-->
 
 <!-- ###### De-select when in Cockpit View or in Navigator View ###### -->
 	<animation>

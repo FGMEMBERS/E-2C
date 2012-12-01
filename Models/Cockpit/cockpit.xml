@@ -3,53 +3,35 @@
 
 <PropertyList>
 
-	<!--<path>group-cockpit.ac</path>-->
-
-	<!--<animation>
-		<type>select</type>
-		<object-name>group-cockpit</object-name>
-		<condition>
-			<or>
-				<equals>
-					<property>sim/current-view/name</property>
-					<value>RIO View</value>
-				</equals>
-				<equals>
-					<property>sim/current-view/name</property>
-					<value>Back-seat View</value>
-				</equals>
-			</or>
-		</condition>
-	</animation>-->
-
-
-	<!-- coarse cockpit 
 	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/coarse-inside.xml</path>
-		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-		</offsets>
-	</model>-->
+		<path>Aircraft/E-2C/Models/Cockpit/cockpit-model.xml</path>
+	</model>
 
-	<!-- detailed cockpit 
+
+<!-- ******************************************************************* -->
+<!-- Pilots                                                              -->
+<!-- ******************************************************************* -->
+
+
+	<!-- Pilot -->
 	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/detail-inside-front.xml</path>
+		<path>Aircraft/E-2C/Models/Crew/pilot.xml</path>
 		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
+			<x-m>-7.1991</x-m>
+			<y-m>-0.4083</y-m>
+			<z-m>-0.5848</z-m>
 		</offsets>
 	</model>
+	<!-- Copilot -->
 	<model>
-		<path>Aircraft/E-2C/Models/Cockpit/detail-inside-back.xml</path>
+		<path>Aircraft/E-2C/Models/Crew/pilot-b.xml</path>
 		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
+			<x-m>-7.1991</x-m>
+			<y-m>0.4283</y-m>
+			<z-m>-0.5848</z-m>
 		</offsets>
-	</model>-->
+	</model>
+
 
 <!-- ******************************************************************* -->
 <!-- Pilot's Instruments                                                 -->
@@ -244,7 +226,7 @@
 	</model>
 
 
-	<!-- Overhead panels -->
+	<!-- Overhead panel left -->
 	<model>
 		<path>Aircraft/E-2C/Models/Cockpit/overhead-L.xml</path>
 		<offsets>
@@ -254,6 +236,17 @@
 			<pitch-deg>19.25</pitch-deg>
 			<roll-deg>2.25</roll-deg>
 			<heading-deg>10</heading-deg>
+		</offsets>
+	</model>
+
+	<!-- Overhead panel center -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/tacan.xml</path>
+		<offsets>
+			<x-m>-7.3253</x-m>
+			<y-m>0.0748</y-m>
+			<z-m>0.0307</z-m>
+			<pitch-deg>110</pitch-deg>
 		</offsets>
 	</model>
 

@@ -292,16 +292,56 @@
 	</animation>
 
 
+<!-- lighting -->
 
+	<animation>
+		<object-name>mount</object-name>
+		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
+		<emission>
+			<factor-prop>controls/lighting/instruments-secondary-norm</factor-prop>
+			<red>0.363</red>
+			<green>0.158</green>
+			<blue>0.066</blue>
+		</emission>
+	</animation>
+	<animation>
+		<object-name>switches</object-name>
+		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
+		<emission>
+			<factor-prop>controls/lighting/instruments-secondary-norm</factor-prop>
+			<red>0.363</red>
+			<green>0.158</green>
+			<blue>0.066</blue>
+		</emission>
+	</animation>
+	<animation>
+		<object-name>lamps-off</object-name>
+		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
+		<emission>
+			<factor-prop>controls/lighting/instruments-secondary-norm</factor-prop>
+			<red>0.363</red>
+			<green>0.158</green>
+			<blue>0.066</blue>
+		</emission>
+	</animation>
 
-
-
-
+	<animation>
+		<type>material</type>
+		<object-name>lamps-on</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
 
 	<animation>
 		<type>range</type>
 		<min-m>0</min-m>
-		<max-m>50</max-m>
+		<max-m>15</max-m>
 	</animation>
 
 </PropertyList>

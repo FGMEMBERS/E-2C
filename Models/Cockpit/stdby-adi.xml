@@ -86,10 +86,10 @@
 		<type>material</type>
 		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 		<emission>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
+			<factor-prop>controls/lighting/instruments-primary-norm</factor-prop>
+			<red>0.385</red>
+			<green>0.168</green>
+			<blue>0.07</blue>
 		</emission>
 	</animation>
 
@@ -109,7 +109,7 @@
 	<animation>
 		<type>range</type>
 		<min-m>0</min-m>
-		<max-m>50</max-m>
+		<max-m>15</max-m>
 	</animation>
 
 </PropertyList>

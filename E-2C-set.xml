@@ -66,37 +66,13 @@ Grumman E-2C simulation config.
 				<z-offset-m>-6.85</z-offset-m>
 				<pitch-offset-deg>-17</pitch-offset-deg>
 				<default-field-of-view-deg>55</default-field-of-view-deg>
-				<!--<limits>
-					<enabled type="bool">true</enabled>
-					<left>
-						<heading-max-deg type="double">140</heading-max-deg>
-						<x-offset-max-m type="double">0.20</x-offset-max-m>
-						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
-					</left>
-					<right>
-						<heading-max-deg type="double">140</heading-max-deg>
-						<x-offset-max-m type="double">0.20</x-offset-max-m>
-						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
-					</right>
-				</limits>-->
 			</config>
 		</view>
 		<view n="1">
 			<config>
-				<!--<target-y-offset-m archive="y" type="double">-1.1761</target-y-offset-m>--><!--axe haut-bas -->
-				<!--<target-x-offset-m archive="y" type="double">-3.5160</target-x-offset-m>--><!--axe g/d -->
-				<!--<target-z-offset-m archive="y" type="double">-0.9924</target-z-offset-m>--><!--axe avant/arrière -->
-				<!--<pitch-offset-deg>-0</pitch-offset-deg>-->
-				<!--<heading-offset-deg>268.5</heading-offset-deg>-->
-				<!--<default-field-of-view-deg>10</default-field-of-view-deg>-->
 			</config>
 		</view>
 		<view n="2">
-				<!--<target-y-offset-m archive="y" type="double">-1.500</target-y-offset-m>-->
-				<!--<target-x-offset-m archive="y" type="double">3.340</target-x-offset-m>-->
-				<!--<target-z-offset-m archive="y" type="double">-0.600</target-z-offset-m>-->
-				<!--<pitch-offset-deg>-0.6</pitch-offset-deg>-->
-				<!--<heading-offset-deg>-268.5</heading-offset-deg>-->
 				<default-field-of-view-deg>10</default-field-of-view-deg>-->
 		</view>
 		<view n="3">
@@ -120,10 +96,10 @@ Grumman E-2C simulation config.
 			<internal type="bool">true</internal>
 			<config>
 				<from-model type="bool">true</from-model>
-				<x-offset-m>0.36</x-offset-m>
-				<y-offset-m>-0.18</y-offset-m>
-				<z-offset-m>-6.9</z-offset-m>
-				<pitch-offset-deg>-5.35</pitch-offset-deg>
+				<x-offset-m>0.45</x-offset-m>
+				<y-offset-m>-0.072</y-offset-m>
+				<z-offset-m>-6.85</z-offset-m>
+				<pitch-offset-deg>-17</pitch-offset-deg>
 				<default-field-of-view-deg>55</default-field-of-view-deg>
 				<!--<limits>
 					<enabled type="bool">true</enabled>
@@ -323,6 +299,7 @@ Grumman E-2C simulation config.
 	<nasal>
 		<E_2C>
 			<file>Aircraft/E-2C/Nasal/E-2C.nas</file>
+			<file>Aircraft/E-2C/Nasal/controls.nas</file>
 			<file>Aircraft/E-2C/Nasal/gear.nas</file>
 			<file>Aircraft/E-2C/Nasal/engines.nas</file>
 			<file>Aircraft/E-2C/Nasal/view.nas</file>

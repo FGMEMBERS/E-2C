@@ -9,9 +9,17 @@ var MagDev           = props.globals.getNode("orientation/local-mag-dev", 1);
 var Tc               = props.globals.getNode("instrumentation/tacan");
 var TcTrueHdg        = Tc.getNode("indicated-bearing-true-deg");
 var TcMagHdg         = Tc.getNode("indicated-mag-bearing-deg", 1);
+var TcXY             = Tc.getNode("frequencies/selected-channel[4]");
+var TcXYSwitch       = props.globals.getNode("sim/model/E-2C/controls/instrumentation/tacan/xy-switch", 1);
 var Vac_inhg         = "systems/vacuum[2]/suction-inhg";
 
 var mag_dev = 0;
+
+
+
+
+
+
 
 
 

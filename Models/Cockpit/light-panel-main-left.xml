@@ -80,36 +80,25 @@
 		<axis><x>-1</x></axis>
 	</animation>
 
-<!-- lighting 
+<!-- lighting  -->
 
 	<animation> 
-		<object-name>mount</object-name>
+		<object-name>light-panel-main-right</object-name>
 		<type>material</type>
+		<condition><not><property>sim/rendering/rembrandt/enabled</property></not></condition>
 		<emission>
-		<factor-prop>controls/lighting/panel-norm</factor-prop>
-			<red>0.385</red>
-			<green>0.168</green>
-			<blue>0.07</blue>
+			<factor-prop>controls/lighting/instruments-primary-norm</factor-prop>
+			<red>0.363</red>
+			<green>0.158</green>
+			<blue>0.066</blue>
 		</emission>
 	</animation>
-
-	<animation>
-		<object-name>instrument</object-name>
-		<type>material</type>
-		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
-			<red>0.55</red>
-			<green>0.24</green>
-			<blue>0.10</blue>
-		</emission>
-	</animation>
-
 
 
 	<animation>
 		<type>range</type>
 		<min-m>0</min-m>
-		<max-m>5</max-m>
-	</animation> -->
+		<max-m>15</max-m>
+	</animation>
 
 </PropertyList>
