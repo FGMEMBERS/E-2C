@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<name>pilot-b</name>
+	<path>Aircraft/E-2C/Models/Crew/pilot-b.ac</path>
+
+	<animation>
+		<type>select</type>
+		<object-name>group-head</object-name>
+		<object-name>group-gear</object-name>
+		<condition>
+			<not-equals>
+				<property>sim/current-view/name</property>
+				<value>Navigator View</value>
+			</not-equals>
+		</condition>
+	</animation>
+	
+
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>50</max-m>
+	</animation>
+
+</PropertyList>

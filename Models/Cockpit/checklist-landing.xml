@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<name>checklist-landing</name>
+	<path>checklist-landing.ac</path>
+
+<!-- lighting --> 
+
+	<animation> 
+		<object-name>checklist-landing</object-name>
+		<type>material</type>
+		<emission>
+		<factor-prop>controls/lighting/instruments-primary-norm</factor-prop>
+			<red>0.385</red>
+			<green>0.168</green>
+			<blue>0.07</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>15</max-m>
+	</animation>
+
+</PropertyList>

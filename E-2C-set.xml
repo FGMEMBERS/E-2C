@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Grumman E-2C simulation config.
+
+2011-04-03 Alexis Bory - alexis.dot.bory.at.gmail.dot.com
+************************************************************************
+-->
+
+<PropertyList>
+	<sim>
+
+
+		<status>alpha</status>
+		<author>Alexis Bory</author>
+		<description>Grumman E-2C (YASim FDM)</description>
+		<rating>
+			<FDM type="int">2</FDM>
+			<systems type="int">0</systems>
+			<cockpit type="int">2</cockpit>
+			<model type="int">3</model>
+		</rating>
+
+		<flight-model>yasim</flight-model>
+		<aero>E-2C-yasim</aero>
+
+		<fuel-fraction>0.66</fuel-fraction>
+		<virtual-cockpit archive="y">false</virtual-cockpit>
+		<chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
+
+		<gui>
+			<style>
+				<colors>
+					<splash-screen>
+						<red>0.55</red>
+						<green>0.55</green>
+						<blue>0.52</blue>
+					</splash-screen>
+				</colors>
+			</style>
+		</gui>
+		<startup>
+			<splash-texture>Aircraft/E-2C/E-2C-splash1.png</splash-texture>
+		</startup>
+
+	<instrumentation>
+		<path>Aircraft/E-2C/Systems/instrumentation.xml</path>
+	</instrumentation>
+
+		<rendering>
+			<redout>
+				<parameters>
+					<blackout-complete-g>7.9</blackout-complete-g>
+					<blackout-onset-g>5.5</blackout-onset-g>
+				</parameters>
+			</redout>
+		</rendering>
+
+		<view n="0">
+			<name>Cockpit View</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<x-offset-m>-0.45</x-offset-m>
+				<y-offset-m>-0.072</y-offset-m>
+				<z-offset-m>-6.85</z-offset-m>
+				<pitch-offset-deg>-17</pitch-offset-deg>
+				<default-field-of-view-deg>55</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="1">
+			<config>
+			</config>
+		</view>
+		<view n="2">
+				<default-field-of-view-deg>10</default-field-of-view-deg>-->
+		</view>
+		<view n="3">
+			<config>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="5">
+			<config>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y" type="double">8.0</target-z-offset-m>
+			</config>
+		</view>
+		<view n="100">
+			<name>Navigator View</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m>0.45</x-offset-m>
+				<y-offset-m>-0.072</y-offset-m>
+				<z-offset-m>-6.85</z-offset-m>
+				<pitch-offset-deg>-17</pitch-offset-deg>
+				<default-field-of-view-deg>55</default-field-of-view-deg>
+				<!--<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">25</x-offset-threshold-deg>
+					</right>
+				</limits>-->
+			</config>
+		</view>
+
+
+
+		<sound>
+			<audible>true</audible>
+			<path>Aircraft/E-2C/Sounds/E-2C-sound.xml</path>
+		</sound>
+
+<!--		<systems>
+			<autopilot>
+				<path>Aircraft/E-2C/Systems/E-2C-autopilot.xml</path>
+			</autopilot>
+		</systems> -->
+
+		<model>
+			<path>Aircraft/E-2C/Models/E-2C-Hawkeye.xml</path>
+			<E-2C>
+				<controls>
+					<engines>
+						<engine n="0">
+							<DEC-control type="int">2</DEC-control><!-- 0 = off, 1 = limiting, 2 = controling -->
+							<start-seq type="int">0</start-seq><!-- 0 = out of seq, > 0 = sequence steps -->
+						</engine>
+						<engine n="1">
+							<DEC-control type="int">2</DEC-control>
+							<start-seq type="int">0</start-seq>
+						</engine>
+					</engines>
+					<fuel>
+						<fuel-dump type="bool">0</fuel-dump>
+						<fuel-dump-rate type="double">1044</fuel-dump-rate><!-- lbs/minute -->
+						<fuel-dump-limit-lbs type="double">1240</fuel-dump-limit-lbs>
+						<tank-interconnect type="bool">0</tank-interconnect>
+					</fuel>
+					<gear>
+						<ld-gear-handle-anim type="double">0</ld-gear-handle-anim>
+						<!-- light position animation should be in the model animation but this is not possible yet. -->
+						<ld-gear-handle-light-anim type="double">
+							<center-x-m>-7.3106</center-x-m><!-- move center -->
+							<center-z-m>-0.8213</center-z-m>
+							<x-m>0</x-m><!-- light position -->
+							<z-m>0</z-m>
+							<radius-m>0.1957</radius-m>
+							<start-angle-deg>-5.8</start-angle-deg>
+							<end-angle-deg>-47.8</end-angle-deg>
+						</ld-gear-handle-light-anim>
+					</gear>
+					<propellers>
+						<propeller  n="0">
+							<NTS-running type="bool">0</NTS-running>
+						</propeller>
+						<propeller  n="1">
+							<NTS-running type="bool">0</NTS-running>
+						</propeller>
+						<auto-feather-arm type="bool">0</auto-feather-arm>
+						<feather-override-switch type="bool">0</feather-override-switch>
+						<fuel-gov-check type="int">0</fuel-gov-check>
+						<sync-master-stby type="bool">0</sync-master-stby>
+					</propellers>
+					<lighting>
+						<!--<anti-collision-switch type="bool">true</anti-collision-switch>-->
+						<!--<hook-bypass type="bool">false</hook-bypass>--><!-- false = carrier -->
+						<index-norm type="double">1</index-norm>
+						<!--<position-tail-switch type="int">1</position-tail-switch>-->
+						<!--<position-wing-switch type="int">1</position-wing-switch>-->
+						<!--<position-flash-switch type="bool">true</position-flash-switch>-->
+					</lighting>
+					<rotodome>
+						<rotation-rpm>5</rotation-rpm>
+					</rotodome>
+				</controls>
+				<instrumentation>
+					<aoa-indexer>
+						<!-- target = 11.5 deg AoA (was 11.8) -->
+						<too-slow-deg>13.1</too-slow-deg> <!-- target +1.6 deg -->
+						<slow-deg>12.3</slow-deg>         <!-- target +0.8 deg -->
+						<target-deg>11.5</target-deg>     <!-- target -->
+						<fast-deg>10.7</fast-deg>         <!-- target -0.8 deg -->
+						<too-fast-deg>9.9</too-fast-deg>  <!-- target -1.6 deg -->
+					</aoa-indexer>
+					<radar-altimeter>
+						<limit-bug type="double">250</limit-bug>
+					</radar-altimeter>
+					<warnings>
+						<master-caution type="bool">0</master-caution>
+					</warnings>
+				</instrumentation>
+			</E-2C>
+
+		</model>
+
+
+		<help>
+<!--			<title>Grumman E-2C</title>
+			<line>Cruise Speed:      412 kt @ 25000 ft (90% throttle)</line>
+			<line>Max speed:         565 kt at see level</line>
+			<line>Min Speed:         120 kt (full flaps)</line>
+			<line>Stall:             145 kt (clean)</line>
+			<line>Take off:          150 kt</line>
+			<line>    Flaps:         TO (30°)</line>
+			<line>Approach:          155/170 kt</line>
+			<line>Landing:           115/140 kt</line>
+			<line>    Flaps:         LD (40°)</line>
+			<key>
+				<name>c</name>
+				<desc>Canopy open/close command</desc>
+			</key>-->
+			<key>
+				<name>C</name>
+				<desc>Catapult launch command</desc>
+			</key>
+			<key>
+				<name>k/j</name>
+				<desc>Speed Brakes open/close</desc>
+			</key>
+			<key>
+				<name>L</name>
+				<desc>Carrier Launch-bar engage</desc>
+			</key>
+			<key>
+				<name>o/O</name>
+				<desc>Hook up/down</desc>
+			</key>
+			<key>
+				<name>f/F</name>
+				<desc>Wing Fold up/down</desc>
+			</key>
+			<key>
+				<name>Ctrl-b</name>
+				<desc>Move head left</desc>
+			</key>
+			<key>
+				<name>Ctrl-n</name>
+				<desc>Move head right</desc>
+			</key>
+		</help>
+
+	</sim>
+
+	<controls>
+		<gear>
+			<brake-parking type="bool">1</brake-parking>
+		</gear>
+		<engines>
+			<engine n="0">
+				<propeller-pitch>1</propeller-pitch>
+			</engine>
+			<engine n="1">
+				<propeller-pitch>1</propeller-pitch>
+			</engine>
+		</engines>
+		<lighting>
+			<instruments-primary-norm type="double">0</instruments-primary-norm>
+			<instruments-secondary-norm type="double">0</instruments-secondary-norm>
+		</lighting>
+	</controls>
+
+
+	<input>
+		<keyboard include="/Input/Keyboard/carrier-bindings.xml">
+			<key n="2">
+				<name>CTRL-b</name>
+				<desc>Move slightly the PoV toward left.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>E_2C.slidePov(-1);</script>
+				</binding>
+			</key>
+			<key n="14">
+				<name>CTRL-n</name>
+				<desc>Move slightly the PoV toward right.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>E_2C.slidePov(1);</script>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
+
+
+	<nasal>
+		<E_2C>
+			<file>Aircraft/E-2C/Nasal/E-2C.nas</file>
+			<file>Aircraft/E-2C/Nasal/controls.nas</file>
+			<file>Aircraft/E-2C/Nasal/gear.nas</file>
+			<file>Aircraft/E-2C/Nasal/engines.nas</file>
+			<file>Aircraft/E-2C/Nasal/view.nas</file>
+		</E_2C>
+		<chronograph>
+			<file>Aircraft/E-2C/Nasal/chronograph.nas</file>
+		</chronograph>
+	</nasal>
+
+
+</PropertyList>

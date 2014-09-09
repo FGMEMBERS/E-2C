@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/cockpit-model.xml</path>
+	</model>
+
+
+<!-- ******************************************************************* -->
+<!-- Pilots                                                              -->
+<!-- ******************************************************************* -->
+
+
+	<!-- Pilot -->
+	<model>
+		<path>Aircraft/E-2C/Models/Crew/pilot.xml</path>
+		<offsets>
+			<x-m>-7.1991</x-m>
+			<y-m>-0.4083</y-m>
+			<z-m>-0.5848</z-m>
+		</offsets>
+	</model>
+	<!-- Copilot -->
+	<model>
+		<path>Aircraft/E-2C/Models/Crew/pilot-b.xml</path>
+		<offsets>
+			<x-m>-7.1991</x-m>
+			<y-m>0.4283</y-m>
+			<z-m>-0.5848</z-m>
+		</offsets>
+	</model>
+
+
+<!-- ******************************************************************* -->
+<!-- Pilot's Instruments                                                 -->
+<!-- ******************************************************************* -->
+
+
+	<!-- Yokes -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/yoke.xml</path>
+		<offsets>
+			<x-m>-7.3946</x-m>
+			<y-m>-0.4520</y-m>
+			<z-m>-0.6551</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/yoke.xml</path>
+		<offsets>
+			<x-m>-7.3946</x-m>
+			<y-m>0.4520</y-m>
+			<z-m>-0.6551</z-m>
+		</offsets>
+	</model>
+
+
+
+
+	<!-- Main Panel Pilot -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/chronograph.xml</path>
+		<offsets>
+			<x-m>-7.6770</x-m>
+			<y-m>-0.6258</y-m>
+			<z-m>-0.6007</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/stdby-adi.xml</path>
+		<offsets>
+			<x-m>-7.7110</x-m>
+			<y-m>-0.3321</y-m>
+			<z-m>-0.4760</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/master-caution.xml</path>
+		<offsets>
+			<x-m>-7.7031</x-m>
+			<y-m>-0.5140</y-m>
+			<z-m>-0.5052</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/radar-altimeter.xml</path>
+		<offsets>
+			<x-m>-7.6583</x-m>
+			<y-m>-0.6385</y-m>
+			<z-m>-0.6744</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/bdhi.xml</path>
+		<offsets>
+			<x-m>-7.6898</x-m>
+			<y-m>-0.3449</y-m>
+			<z-m>-0.5514</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/aoa-gauge.xml</path>
+		<offsets>
+			<x-m>-7.7091</x-m>
+			<y-m>-0.3925</y-m>
+			<z-m>-0.4761</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/adi.xml</path>
+		<offsets>
+			<x-m>-7.6852</x-m>
+			<y-m>-0.4482</y-m>
+			<z-m>-0.5690</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/vsi.xml</path>
+		<offsets>
+			<x-m>-7.6603</x-m>
+			<y-m>-0.4788</y-m>
+			<z-m>-0.6619</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/asi.xml</path>
+		<offsets>
+			<x-m>-7.6801</x-m>
+			<y-m>-0.5527</y-m>
+			<z-m>-0.5885</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/altimeter.xml</path>
+		<offsets>
+			<x-m>-7.6572</x-m>
+			<y-m>-0.5527</y-m>
+			<z-m>-0.6743</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/fuel-gauge.xml</path>
+		<offsets>
+			<x-m>-7.6587</x-m>
+			<y-m>-0.2691</y-m>
+			<z-m>-0.6719</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/turbine-temp-gauge.xml</path>
+		<offsets>
+			<x-m>-7.6817</x-m>
+			<y-m>-0.2691</y-m>
+			<z-m>-0.5856</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/checklist-landing.xml</path>
+		<offsets>
+			<x-m>-7.6604</x-m>
+			<y-m>-0.6989</y-m>
+			<z-m>-0.6677</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/light-panel-main-left.xml</path>
+		<offsets>
+			<x-m>-7.6383</x-m>
+			<y-m>-0.6357</y-m>
+			<z-m>-0.7477</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+
+
+	<!-- Main Panel Copilot -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/light-panel-main-right.xml</path>
+		<offsets>
+			<x-m>-7.6383</x-m>
+			<y-m>0.6357</y-m>
+			<z-m>-0.7477</z-m>
+			<pitch-deg>-15</pitch-deg>
+		</offsets>
+	</model>
+
+
+	<!-- Windshield Indicators -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/aoa-indexer.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+
+
+	<!-- Overhead panel left -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/overhead-L.xml</path>
+		<offsets>
+			<x-m>-7.2864</x-m>
+			<y-m>-0.3721</y-m>
+			<z-m>0.0942</z-m>
+			<pitch-deg>19.25</pitch-deg>
+			<roll-deg>2.25</roll-deg>
+			<heading-deg>10</heading-deg>
+		</offsets>
+	</model>
+
+	<!-- Overhead panel center -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/tacan.xml</path>
+		<offsets>
+			<x-m>-7.3253</x-m>
+			<y-m>0.0748</y-m>
+			<z-m>0.0307</z-m>
+			<pitch-deg>110</pitch-deg>
+		</offsets>
+	</model>
+
+
+	<!-- Pedestal -->
+	<model>
+		<path>Aircraft/E-2C/Models/Cockpit/ldg-control-panel.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+
+
+
+
+<!-- ******************************************************************* -->
+<!-- Specials                                                            -->
+<!-- ******************************************************************* -->
+
+
+	<!-- Lighting 
+	<animation> 
+		<object-name>pilots-canopy-jett</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.1375</red>
+			<green>0.06</green>
+			<blue>0.025</blue>
+		</emission>
+	</animation>
+	<animation>
+		<object-name>panel-front-cover-protection</object-name>
+		<object-name>bathtub-top-front</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<red>0.0687</red>
+			<green>0.03</green>
+			<blue>0.0125</blue>
+		</emission>
+	</animation>-->
+
+</PropertyList>
