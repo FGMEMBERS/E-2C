@@ -21,6 +21,27 @@ Grumman E-2C simulation config.
 			<model type="int">3</model>
 		</rating>
 
+ 		<tags>
+			<tag>northrop</tag>
+			<tag>grumman</tag>
+			<tag>1970s</tag>
+			<tag>1980s</tag>
+			<tag>1990s</tag>
+			<tag>2000s</tag>
+			<tag>2010s</tag>
+			<tag>coldwar</tag>
+			<tag>vietnam</tag>
+			<tag>gulfwar1</tag>
+			<tag>gulfwar2</tag>
+			<tag>high-wing</tag>
+			<tag>ifr</tag>
+			<tag>retractable-gear</tag>
+			<tag>tail-hook</tag>
+			<tag>wing-fold</tag>
+			<tag>turboprop</tag>
+			<tag>rembrandt</tag>
+		</tags>
+
 		<flight-model>yasim</flight-model>
 		<aero>E-2C-yasim</aero>
 
