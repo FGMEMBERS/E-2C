@@ -171,6 +171,7 @@ Grumman E-2C simulation config.
 
 		<model>
 			<path>Aircraft/E-2C/Models/E-2C-Hawkeye.xml</path>
+			<fallback-model-index type="int">551</fallback-model-index>
 			<E-2C>
 				<controls>
 					<engines>
