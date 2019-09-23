@@ -42,6 +42,24 @@ Grumman E-2C simulation config.
 			<tag>rembrandt</tag>
 		</tags>
 
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Pics/hawkeye_exterior01.jpg</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Pics/hawkeye_exterior02.jpg</path>
+			</preview>
+			<preview>
+				<type>panel</type>
+				<splash type="bool">false</splash>
+				<path>Pics/hawkeye_interior.jpg</path>
+			</preview>
+		</previews>
+
 		<flight-model>yasim</flight-model>
 		<aero>E-2C-yasim</aero>
 
@@ -153,6 +171,7 @@ Grumman E-2C simulation config.
 
 		<model>
 			<path>Aircraft/E-2C/Models/E-2C-Hawkeye.xml</path>
+			<fallback-model-index type="int">551</fallback-model-index>
 			<E-2C>
 				<controls>
 					<engines>
